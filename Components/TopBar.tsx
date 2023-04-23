@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import {TextInput, Image, View} from 'react-native';
+import {TextInput, Image, View, Platform} from 'react-native';
 
 function TopBar() {
   return (
@@ -9,6 +9,7 @@ function TopBar() {
       style={{
         flexDirection: 'row',
         justifyContent: 'space-between',
+        paddingTop: Platform.OS === 'android' ? 15 : 5,
       }}>
       <Image
         source={require('../assets/icons/menu-bar.png')}
@@ -25,6 +26,7 @@ function TopBar() {
             borderRadius: 20,
             right: 0,
             shadowOpacity: 0.4,
+            elevation: 1,
             fontSize: 20,
             textAlign: 'center',
           }}
