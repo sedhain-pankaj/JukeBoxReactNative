@@ -1,13 +1,27 @@
+/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import {View} from 'react-native';
-import Video from 'react-native-video';
+import {Dimensions, View} from 'react-native';
 
-function VideoPlayer() {
+function Video() {
   return (
-    <View id="Video">
-      {/* create a video element with a random yt video */}
-    </View>
+    <View
+      style={{
+        backgroundColor: 'black',
+        width: getDeviceWidth() - 15,
+        height: getDeviceHeight() / 3,
+        alignSelf: 'center',
+        borderRadius: 10,
+      }}
+    />
   );
 }
 
-export default VideoPlayer;
+function getDeviceWidth() {
+  return Dimensions.get('window').width;
+}
+
+function getDeviceHeight() {
+  return Dimensions.get('window').height;
+}
+
+export default Video;
