@@ -2,13 +2,17 @@ import React from 'react';
 import {SafeAreaView} from 'react-native';
 
 import TopBar from './Components/TopBar';
-import VideoPlayer from './Components/Video';
+import Video from './Components/Video';
+import Button from './Components/Button';
+import Content from './Components/Content';
 
 function App() {
   return (
     <SafeAreaView>
       <TopBar />
-      <VideoPlayer />
+      <Video />
+      <Button />
+      <Content />
     </SafeAreaView>
   );
 }
